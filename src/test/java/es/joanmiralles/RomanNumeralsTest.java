@@ -1,5 +1,6 @@
 package es.joanmiralles;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -9,17 +10,26 @@ public class RomanNumeralsTest {
 
     private RomanNumerals romanNumerals;
 
+    @Before
+    public void setUp() throws Exception {
+        romanNumerals = new RomanNumerals();
+    }
+
     @Test
     public void testRomanNumerals() {
-        romanNumerals = new RomanNumerals();
         String result = romanNumerals.generate(1);
         assertThat(result, is("I"));
     }
 
     @Test
-    public void testOneReturnI(){
-        romanNumerals = new RomanNumerals();
+    public void testTwoReturnII(){
         String result = romanNumerals.generate(2);
         assertThat(result, is("II"));
+    }
+
+    @Test
+    public void testThreeReturnIII(){
+        String result = romanNumerals.generate(2);
+        assertThat(result, is("III"));
     }
 }
