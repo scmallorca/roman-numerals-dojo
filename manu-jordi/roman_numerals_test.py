@@ -22,5 +22,11 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_ten_returns_X(self):
         self.assertEqual(self.roman_numerals.convert_from_integer(10), 'X')
 
+    def test_roman_lettrs_can_repeat_three_times(self):
+        one_roman = self.roman_numerals.convert_from_integer(1)
+        three_roman = self.roman_numerals.convert_from_integer(3)
+
+        self.assertEqual(three_roman, one_roman*3)
+
 if __name__ == '__main__':
     unittest.main()
