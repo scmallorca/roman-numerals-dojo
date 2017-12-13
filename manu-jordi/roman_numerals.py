@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 
-class Kata:
-    def __init__(self):
-        self.data = ""
-
+class RomanNumerals:
     def get_roman_numeral(self, x):
         return "I"
 
