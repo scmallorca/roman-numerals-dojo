@@ -15,4 +15,11 @@ public class RomanNumeralsTest {
         String result = romanNumerals.generate(1);
         assertThat(result, is("I"));
     }
+
+    @Test
+    public void testOneReturnI(){
+        romanNumerals = new RomanNumerals();
+        String result = romanNumerals.generate(2);
+        assertThat(result, is("II"));
+    }
 }
