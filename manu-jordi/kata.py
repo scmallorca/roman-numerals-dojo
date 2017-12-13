@@ -4,7 +4,7 @@ class Kata:
     def __init__(self):
         self.data = "";
 
-    def getRomanNumeral(self, x):
+    def get_roman_numeral(self, x):
         return ""
 
 
