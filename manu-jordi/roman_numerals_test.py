@@ -13,5 +13,8 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_one_returns_I(self):
         self.assertEqual(self.roman_numerals.get_roman_numeral(1), 'I')
 
+    def test_two_returns_II(self):
+        self.assertEqual(self.roman_numerals.get_roman_numeral(2), 'II')
+
 if __name__ == '__main__':
     unittest.main()
