@@ -19,5 +19,8 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_five_returns_V(self):
         self.assertEqual(self.roman_numerals.convert_from_integer(5), 'V')
 
+    def test_ten_returns_X(self):
+        self.assertEqual(self.roman_numerals.convert_from_integer(10), 'X')
+
 if __name__ == '__main__':
     unittest.main()
