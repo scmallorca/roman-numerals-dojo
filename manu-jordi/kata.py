@@ -2,10 +2,10 @@
 
 class Kata:
     def __init__(self):
-        self.data = "";
+        self.data = ""
 
     def get_roman_numeral(self, x):
-        return ""
+        return "I"
 
 
 
