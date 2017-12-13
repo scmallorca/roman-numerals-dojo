@@ -2,7 +2,10 @@
 
 class RomanNumerals:
     def convert_from_integer(self, integer):
-        return "V" if integer >= 5 else "I" * integer
+        if integer >= 5:
+            return "V"
+        else:
+            return "I" * integer
 
 
 
