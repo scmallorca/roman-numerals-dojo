@@ -41,8 +41,19 @@ public class RomanNumeralsTest {
     }
 
     @Test
-    public void testTenReturnX(){
-        String result = romanNumerals.generate(10);
-        assertThat(result, is("X"));
+        public void testTenReturnX(){
+            String result = romanNumerals.generate(10);
+            assertThat(result, is("X"));
+    }
+    @Test
+    public void testThirtyReturnXXX() {
+        String result = romanNumerals.generate(30);
+        assertThat(result, is("XXX"));
+    }
+
+    @Test
+    public void testThirtySixReturnXXXVI() {
+        String result = romanNumerals.generate(36);
+        assertThat(result, is("XXXVI"));
     }
 }
