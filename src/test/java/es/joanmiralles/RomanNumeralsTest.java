@@ -29,7 +29,14 @@ public class RomanNumeralsTest {
 
     @Test
     public void testThreeReturnIII(){
-        String result = romanNumerals.generate(2);
+        String result = romanNumerals.generate(3);
         assertThat(result, is("III"));
+    }
+
+
+    @Test
+    public void testFiveReturnV(){
+        String result = romanNumerals.generate(5);
+        assertThat(result, is("V"));
     }
 }
