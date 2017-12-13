@@ -39,4 +39,10 @@ public class RomanNumeralsTest {
         String result = romanNumerals.generate(5);
         assertThat(result, is("V"));
     }
+
+    @Test
+    public void testTenReturnX(){
+        String result = romanNumerals.generate(10);
+        assertThat(result, is("X"));
+    }
 }

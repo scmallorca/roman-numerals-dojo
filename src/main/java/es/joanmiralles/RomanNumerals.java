@@ -1,18 +1,31 @@
 package es.joanmiralles;
 
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class RomanNumerals {
 
-    public static final String ROMAN_I = "I";
-    public static final String ROMAN_II = "II";
-    public static final String ROMAN_III = "III";
-
     public String generate(int i) {
-        if(i == 1) {
-            return ROMAN_I;
-        }else if (i == 2) {
-            return ROMAN_II;
-        }else {
-            return ROMAN_III;
+        if (i < 5) {
+            return RomanSymbol.I.times(i);
+        } else {
+            return RomanSymbol.V.name();
+        }
+    }
+
+    enum RomanSymbol {
+        I(1),
+        V(5);
+
+        private final int value;
+
+        RomanSymbol(int value) {
+            this.value = value;
+        }
+
+        String times(int i) {
+            return IntStream.range(0, i).mapToObj(j -> this.name()).collect(Collectors.joining());
         }
     }
 }
