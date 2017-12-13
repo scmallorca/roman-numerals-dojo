@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 class RomanNumerals:
-    def get_roman_numeral(self, x):
-        return "I" * x
+    def convert_from_integer(self, integer):
+        return "I" * integer
 
 
 
